@@ -1,27 +1,26 @@
-const open = document.querySelector(".open-menu")
+const openMenu = document.querySelector(".open-menu")
 const closeMenu = document.querySelector(".close-menu")
 const sideNav = document.querySelector(".side-menu")
-const navList = document.querySelectorAll(".nav-list")
-const sideDropdown = document.querySelectorAll(".side-dropdown")
+const sideNavlist = document.querySelectorAll(".side-nav .nav-list")
 
-open.addEventListener("click", () => {
+openMenu.addEventListener("click", () => {
     sideNav.classList.add("active")
     closeMenu.classList.add("active")
-    open.classList.add("inactive")
+    openMenu.classList.add("inactive")
 })
 
 closeMenu.addEventListener("click", () => {
     sideNav.classList.remove("active")
     closeMenu.classList.remove("active")
-    open.classList.remove("inactive")
+    openMenu.classList.remove("inactive")
 })
 
-// navList.forEach(list => {
-//     list.addEventListener("click", () => {
-//         console.log(list)
-//         sideDropdown.forEach(dropdown => {
-//             console.log(dropdown)
-//             dropdown.classList.toggle("active")
-//         })
-//     })
-// })
+sideNavlist.forEach(list => {
+    list.addEventListener("click", (e) => {
+        console.log(e.target.parentElement.lastElementChild)
+        const dropdown = e.target.parentElement.lastElementChild
+        console.log(list)
+        dropdown.classList.toggle("active")
+    })
+})
+

@@ -235,7 +235,7 @@ hr {
     display: block;
 }
 
-.side-dropdown.active .dropdown-icon {
+.side-nav .nav-list:hover .dropdown-icon{
     transform: rotate(180deg);
 }
 

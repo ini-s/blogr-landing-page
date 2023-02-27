@@ -74,6 +74,7 @@ header .end {
 .login {
     margin-right: 2rem;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .login:hover {
@@ -90,6 +91,7 @@ button {
     color: hsl(353, 100%, 62%);
     border-radius: 30px;
     cursor: pointer;
+    transition: 0.4s ease;
 }
 
 .signup-btn:hover,
@@ -121,6 +123,7 @@ button {
 .dropdown li {
     padding-bottom: 0.7rem;
     opacity: 0.7;
+    transition: 0.3s ease;
 }
 
 .dropdown li:hover {
@@ -139,6 +142,10 @@ button {
     cursor: pointer;
 }
 
+.main-nav ul li {
+    transition: 0.4s ease;
+}
+
 .main-nav ul li:hover {
     text-decoration: underline;
     opacity: 1;
@@ -150,6 +157,7 @@ button {
 
 .main-nav .dropdown li {
     opacity: 0.7;
+    transition: 0.3s ease;
 }
 
 .main-nav ul li:hover .dropdown-icon {
@@ -235,7 +243,7 @@ hr {
     display: block;
 }
 
-.side-nav .nav-list:hover .dropdown-icon{
+.side-nav .nav-list:hover .dropdown-icon {
     transform: rotate(180deg);
 }
 
@@ -261,12 +269,14 @@ h1 {
     margin: 0 0.5rem 1rem 0;
     background-color: hsl(0, 0%, 100%);
     color: hsl(353, 100%, 62%);
+    transition: 0.3s ease;
 }
 
 .learn {
     background-color: transparent;
     color: hsl(0, 0%, 100%);
     border: 1px solid hsl(0, 0%, 100%);
+    transition: 0.3s ease;
 }
 
 .learn:hover {
@@ -410,13 +420,19 @@ footer .col {
     padding-bottom: 0.5rem;
     font-size: 1rem;
     opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.col li a {
+    text-decoration: none;
+    color: white;
 }
 
 footer ul {
     padding-block: 2rem;
 }
 
-footer ul li:hover {
+footer ul li a:hover {
     text-decoration: underline;
 }
 
@@ -483,7 +499,6 @@ footer ul li:hover {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         padding-left: 6rem;
-        gap: 5rem;
     }
 
     .top-text {
@@ -599,5 +614,15 @@ footer ul li:hover {
 @media screen and (min-width: 1300px) {
     .bottom {
         margin-top: 15rem;
+    }
+
+    .top{
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 969px){
+    .editor-desktop{
+        top: 2rem;
     }
 }
